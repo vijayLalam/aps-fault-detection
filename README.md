@@ -17,3 +17,4 @@ To download the dataset:
 ----
 wget https://raw.githubusercontent.com/avnyadav/sensor-fault-detection/main/aps_failure_training_set1.csv
 ----
+This change has been made in Neuro LAB to check conflict of entering data both in vscode and git
