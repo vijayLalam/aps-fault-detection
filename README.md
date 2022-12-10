@@ -37,7 +37,7 @@ Add your change made in file to get staggong area
 ---
 git add file_name
 ---
-Note:you can given file_name to add specific file or use "." to add everything to staging area
+Note:you can given file_name to add specific file or use "." to add everything in current working directory(here Workspace)  to staging area
 
 Create Commits
 ---
@@ -59,3 +59,25 @@ To push your changes forcefully
 ---
 git push origin main -f
 ---
+---
+install_requires in setup.py file
+---
+install_requires is a section within the setup.py file in which you need to input a list of the minimum dependencies needed for a project to run correctly on the target operating system (such as ubuntu). When pip runs setup.py, it will install all of the dependencies listed in install_requires.
+For example, if your project includes matplotlib, you’ll need to list it, as well as its dependency of NumPy in install_requires as shown below:
+---
+install_requires=['<matplotlib>','<numpy>']
+---
+====
+significance of '-e.' in requirements.txt
+====
+if you install libraries using pip install -r requirements.txt,then '-e.' trigger to install setup.py file(If you want your source code to be used as Library).'e' represent editable installation means we can edit our source code and '.' represent install setup .py file in current working directory.Without runninng setup file our source code as library with 0.0.0.1 version will not be released.without '-e.',setup file will not be triggered
+
+---
+if you use 'install_requires' ,then '-e.' is not required. so we need to remove it from requirements.txt
+===
+---
+To install libraries required for source code
+---
+abc@f32c6df925e5:~/workspace$ pip freeze > requirements.txt
+abc@f32c6df925e5:~/workspace$ pip install -r requirements.txt
+===
