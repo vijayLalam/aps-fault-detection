@@ -1,7 +1,7 @@
 #setup.py---To convert the source code into Library format so that it can be installed & imported /used in other files by pip install package_name & import package_name
 from setuptools import find_packages,setup
 from typing import List
-REQUIREMENT_FILE_NAME=requirements.txt
+REQUIREMENT_FILE_NAME="requirements.txt"
 def get_requirements()->List[str]:
 
     #List[str] returnds list of libraries from requirements.txt
