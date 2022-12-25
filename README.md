@@ -83,3 +83,33 @@ abc@f32c6df925e5:~/workspace$ pip install -r requirements.txt
 ===
 After running the above command,sensor.egg-info will be created under sensor folder
 Due to the presence of -.e in the requirements.txt file,setup.py is triggered to install our source code available in the sensor folder along with __init__.py file.findpackages() in the setup.py file try to find out the folder having __init__.py file and consider the folder as package/Library and the  the source code file in that folder as module
+----------------------------------------------------------------------------------------------------------------------------
+===== Model Training pipeline=====
+In Jupyter Note book---After EDA,Preprocessing & Feature Engineering and comparing accuracy of various models picking up best model,We will go for "Model training Pipeline"
+Pipeline means sequence of components executed in specific order.Each component requires some input(configuration in iNeuron) and generates some output(artifact)
+An artifact is a machine learning term that is used to describe the output created by the training process in training pipeline . Output could be a fully trained model, a model checkpoint, or a file or a graph created during the training process.
+
+Model Training pipe Line:
+Data Ingestion->Data Validation ->Data Transformation->Model Trainer ->Model Evaluation->Model Pusher
+1)Data Ingestion:
+Bringing Data from Data Source
+Splitting data set into 3 files(Training,Validation,testing ) or 2 files(Traing and Testing) parts
+2)Data Validation:
+Checking the data is valid or not i.e., correct or not.It's not EDA/Feature Engineering
+Checking datatypes of dataset,no of columns,column data is numerical or not,how many records are having missing values
+3)data Transformation:
+Scaling(Standard Scaling/MinMax Scalar)
+Converting Categorical data into Numerical data
+4)Model Trainer:
+Picking up the best model and parameter tuning using Grid search CV etc
+5)Model Evaluation:
+Testing model
+If u r creating new model,compare it's accuracy with the existing model's accuracy which is already in production.
+If newly trained model gives better accuracy,the model in production will be replaced with it
+5)Model Pusher:
+If newly trained model gives better accuracy,the model in production will be replaced with it.Model pusher will push the newly trained model into production
+===========================================================
+====ML/Deeplearning training pipeline====
+https://www.tensorflow.org/tfx
+============================================================
+A TFX pipeline is a sequence of components that implement an ML pipeline which is specifically designed for scalable, high-performance machine learning tasks. Components are built using TFX libraries which can also be used individually.
