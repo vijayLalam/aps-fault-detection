@@ -70,7 +70,7 @@ install_requires=['<matplotlib>','<numpy>']
 ====
 significance of '-e.' in requirements.txt
 ====
-if you install libraries using pip install -r requirements.txt,then '-e.' trigger to install setup.py file(If you want your source code to be used as Library).'e' represent editable installation means we can edit our source code and '.' represent install setup .py file in current working directory.Without runninng setup file our source code as library with 0.0.0.1 version will not be released.without '-e.',setup file will not be triggered
+if you install libraries using pip install -r requirements.txt,then '-e.' trigger to install setup.py file(If you want your source code to be used as Library).'e' represent editable installation means we can edit our source code and '.' represent install setup .py file in current working directory.If you want your source code is to be installed as Library,setup.py file must be installed.gWithout runninng setup file our source code as library with 0.0.1 version will not be released.without '-e.',setup file will not be triggered
 
 ---
 if you use 'install_requires' ,then '-e.' is not required. so we need to remove it from requirements.txt
