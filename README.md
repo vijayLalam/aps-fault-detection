@@ -81,3 +81,5 @@ To install libraries required for source code
 abc@f32c6df925e5:~/workspace$ pip freeze > requirements.txt
 abc@f32c6df925e5:~/workspace$ pip install -r requirements.txt
 ===
+After running the above command,sensor.egg-info will be created under sensor folder
+Due to the presence of -.e in the requirements.txt file,setup.py is triggered to install our source code available in the sensor folder along with __init__.py file.findpackages() in the setup.py file try to find out the folder having __init__.py file and consider the folder as package/Library and the  the source code file in that folder as module

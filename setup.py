@@ -5,6 +5,8 @@ from typing import List
 REQUIREMENT_FILE_NAME="requirements.txt"
 HYPHEN_E_DOT = "-e ."
 def get_requirements()->List[str]:
+    #List[str] is just like annoatation gives the info to reader 
+    ##that this fn will return List of srtings.
 
     #List[str] returns list of libraries from requirements.txt
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
