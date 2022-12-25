@@ -22,7 +22,7 @@ setup(
     version="0.0.1",
     author="vijayLalam",
     author_email="vijaysankar117@gmail.com",
-    #find_packages() will try to search the folder(ex: sensor) having pytho code along with __init__.py 
+    #find_packages() will try to search the folder(ex: sensor) having python source code along with __init__.py 
     ##and consider the folder(ex: Sensor) as package/Library and the python code file as Module
     packages=find_packages(),
     install_requires=get_requirements(),
