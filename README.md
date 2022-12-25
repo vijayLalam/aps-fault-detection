@@ -113,3 +113,14 @@ If newly trained model gives better accuracy,the model in production will be rep
 https://www.tensorflow.org/tfx
 ============================================================
 A TFX pipeline is a sequence of components that implement an ML pipeline which is specifically designed for scalable, high-performance machine learning tasks. Components are built using TFX libraries which can also be used individually.
+
+==========================================================
+Folders under Sensor:
+Entity:To define the structure of i/p and o/p of each component in the training pipeline
+Utils:Some helper functions may be required to load ur model,to save ur model,to save the artifacts in S3 bucket.These helper functions will be defined in Utils folder.
+step1:
+
+Entity:Defining i/p & O/p in entity folder
+We should know the what is the i/p(configuration) required for particular component& what o/p(artifact) it will generate.
+We have to create 7 confguration & 6 artifacts in entity folder for all the 6 components in traing pipeline
+
