@@ -123,4 +123,7 @@ step1:
 Entity:Defining i/p & O/p in entity folder
 We should know the what is the i/p(configuration) required for particular component& what o/p(artifact) it will generate.
 We have to create 7 confguration & 6 artifacts in entity folder for all the 6 components in traing pipeline
-
+=========================================
+========Logging==========================
+Logging is a Python module in the standard library that provides the facility to work with the framework for releasing log messages from the Python programs. Logging is used to tracking events that occur when the software runs.
+Logging is beneficial to store the logging records. Suppose there is no logging record, and the program is interrupted during its execution, we will be unable to find the actual cause of the problem.
