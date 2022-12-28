@@ -127,3 +127,10 @@ We have to create 7 confguration & 6 artifacts in entity folder for all the 6 co
 ========Logging==========================
 Logging is a Python module in the standard library that provides the facility to work with the framework for releasing log messages from the Python programs. Logging is used to tracking events that occur when the software runs.
 Logging is beneficial to store the logging records. Suppose there is no logging record, and the program is interrupted during its execution, we will be unable to find the actual cause of the problem.
+Logging Levels-
+Notset(0)
+Debug (10): These are used to give Detailed information, typically of interest only when diagnosing problems.
+Info (20): These are used to confirm that things are working as expected
+Warning (30): These are used an indication that something unexpected happened, or is indicative of some problem in the near future
+Error (40): This tells that due to a more serious problem, the software has not been able to perform some function
+Critical(50) : This tells serious error, indicating that the program itself may be unable to continue running
