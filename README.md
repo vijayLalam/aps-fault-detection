@@ -124,6 +124,7 @@ Entity:Defining i/p & O/p in entity folder
 We should know the what is the i/p(configuration) required for particular component& what o/p(artifact) it will generate.
 We have to create 7 confguration & 6 artifacts in entity folder for all the 6 components in traing pipeline
 =========================================
+
 ========Logging==========================
 Logging is a Python module in the standard library that provides the facility to work with the framework for releasing log messages from the Python programs. Logging is used to tracking events that occur when the software runs.
 Logging is beneficial to store the logging records. Suppose there is no logging record, and the program is interrupted during its execution, we will be unable to find the actual cause of the problem.
@@ -134,3 +135,38 @@ Info (20): These are used to confirm that things are working as expected
 Warning (30): These are used an indication that something unexpected happened, or is indicative of some problem in the near future
 Error (40): This tells that due to a more serious problem, the software has not been able to perform some function
 Critical(50) : This tells serious error, indicating that the program itself may be unable to continue running
+===============================================================================================================
+
+=================logger.py================
+logger.py is created under sensor folder
+logs directory path and logging level are defined in this file
+===============================================================================================================
+==================exception.py=============
+exception.py is created under sensor folder
+It will give the details ----from which file,line no   the exception occured.It also gives the error message
+================================================================================================================
+========We tested the logger.py & exception.py code with the following code being written in main.py========
+from sensor.logger import logging
+from sensor.exception import SensorException
+import sys,os
+
+def test_logger_and_exception():
+     try:
+          logging.info("Starting the test_logger_and_exception")
+          result =3/0
+          print(result)
+          logging.info("Stopping the test_logger_and_excedption")
+     except Exception as e:
+          logging.debug("Stopping the test_logger_and_excedption")
+          raise SensorException(e, sys)
+if __name__=="__main__":
+     try:
+          test_logger_and_exception()
+     except Exception as e:
+          print(e)
+----The log file created under the folder logs
+==============================================================================================
+============config.py under sendor folder==============
+Here mongoddb local host url has been given to connect python to mongodb
+=============================================================================================
+

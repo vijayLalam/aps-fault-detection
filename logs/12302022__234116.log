@@ -1,0 +1,3 @@
+[2022-12-30 23:41:16,598] 18 root - INFO - Reading data from database: aps and collection: sensor
+[2022-12-30 23:41:16,602] 20 root - INFO - Found columns:Index([], dtype='object')
+[2022-12-30 23:41:16,602] 24 root - INFO - Row and col
