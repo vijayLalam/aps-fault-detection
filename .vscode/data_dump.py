@@ -26,3 +26,4 @@ if __name__=="__main__":
    
     #using client we will insert converted json data into mongodb
     mongo_client[DATABASE_NAME][COLLECTION_NAME].insert_many(json_record)
+    print("dump_data completed")

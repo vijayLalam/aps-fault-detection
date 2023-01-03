@@ -1,0 +1,10 @@
+[2023-01-02 07:55:41,200] 19 root - INFO - Reading data from database: aps and collection: sensor
+[2023-01-02 07:55:45,671] 23 root - INFO - Found columns: Index(['_id', 'class', 'aa_000', 'ab_000', 'ac_000', 'ad_000', 'ae_000',
+       'af_000', 'ag_000', 'ag_001',
+       ...
+       'ee_002', 'ee_003', 'ee_004', 'ee_005', 'ee_006', 'ee_007', 'ee_008',
+       'ee_009', 'ef_000', 'eg_000'],
+      dtype='object', length=172)
+[2023-01-02 07:55:45,671] 25 root - INFO - Dropping column: _id 
+[2023-01-02 07:55:45,879] 27 root - INFO - Row and columns in df: (36188, 171)
+[2023-01-02 07:55:46,272] 9 root - INFO - get_collection_as_dataframe function in sensor.utils.py called from main.py and  execution completed successfully
