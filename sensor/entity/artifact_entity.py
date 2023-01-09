@@ -1,5 +1,12 @@
+from dataclasses import dataclass
+
+
+@dataclass
+#Here we are defining the output of dataingestion component
 class DataIngestionArtifact:
-    pass
+    feature_store_file_path:str
+    train_file_path:str
+    test_file_path:str
 # "..." is replacement for pass
 class DataValidationArtifact:...
 class DataTransformationArtifact:...
