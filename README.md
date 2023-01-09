@@ -169,4 +169,10 @@ if __name__=="__main__":
 ============config.py under sendor folder==============
 Here mongoddb local host url has been given to connect python to mongodb
 =============================================================================================
-
+---------------config_entity.py-------------------------------------------------------------
+    Traingingpipelineconfig in config_entity is to store each file we generate
+and all the outputs of our model like model o/p,graph, metrics in a folder(artifact) 
+    We have to pass object of TrainingPipeLineConfig to every component in training pipeline
+so that o/p folder for each component will be created in the object of the class TrainingPipelineConfig(self.artifact_dir) i.e., path:arifact/time stamp/data_ingestion
+    Data ingestion o/p we have to generate here  
+-----------------------------------------------------------------------------------------------------
