@@ -2,7 +2,7 @@ import pandas as pd
 from sensor.logger import logging
 from sensor.exception import SensorException
 from sensor.config import mongo_client
-import sys
+import os,sys
 
 def get_collection_as_dataframe(database_name:str,collection_name:str)->pd.DataFrame:
 
@@ -17,8 +17,9 @@ def get_collection_as_dataframe(database_name:str,collection_name:str)->pd.DataF
     """
     try:
         logging.info(f"Reading data from database: {database_name} and collection: {collection_name}")
-        print(list(mongo_client[database_name][collection_name].find().limit(3618)))
-        df = pd.DataFrame(list(mongo_client[database_name][collection_name].find().limit(3618)))
+        print(mongo_client[database_name][collection_name].find())
+        df = pd.DataFrame(list(mongo_client[database_name][collection_name].find()))
+        print(df)
         print(df.shape)
         print(df.sample(5))
         logging.info(f"Found columns: {df.columns}")

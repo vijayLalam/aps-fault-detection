@@ -16,6 +16,7 @@ class TrainingPipelineConfig:
 #  and all the outputs of our model like model o/p,graph, metrics in a folder(artifact) 
     def __init__(self):
         self.artifact_dir = os.path.join(os.getcwd(),"artifact",f"{datetime.now().strftime('%m%d%Y__%H%M%S')}")
+        print(self.artifact_dir)
 class DataIngestionConfig:
     #We have to pass object of TrainingPipeLineConfig to every component in training pipeline
     # so that o/p folder for each component will be created in the object of the class TrainingPipelineConfig(self.artifact_dir)

@@ -11,6 +11,7 @@ if __name__=="__main__":
           data_ingestion_config = config_entity.DataIngestionConfig(training_pipeline_config)
           print(data_ingestion_config.to_dict())
           data_ingestion = data_ingestion.DataIngestion(data_ingestion_config=data_ingestion_config)
+          print(data_ingestion)
           print(data_ingestion.initiate_data_ingestion())
 
           #get_collection_as_dataframe(database_name='aps',collection_name='sensor')

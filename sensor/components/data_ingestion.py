@@ -42,7 +42,7 @@ class DataIngestion:
             logging.info("Create dataset directory folder if not available")
             #Create dataset directory folder if not available
             dataset_dir = os.path.dirname(self.data_ingestion_config.train_file_path)
-            os.makedirs(dataset_dir,exist_ok-True)
+            os.makedirs(dataset_dir,exist_ok=True)
 
             logging.info("Save df to feature store folder")
             #Save df to feature store folder
