@@ -17,7 +17,8 @@ def get_collection_as_dataframe(database_name:str,collection_name:str)->pd.DataF
     """
     try:
         logging.info(f"Reading data from database: {database_name} and collection: {collection_name}")
-        df = pd.DataFrame(list(mongo_client[database_name][collection_name].find().limit(36188)))
+        print(list(mongo_client[database_name][collection_name].find().limit(3618)))
+        df = pd.DataFrame(list(mongo_client[database_name][collection_name].find().limit(3618)))
         print(df.shape)
         print(df.sample(5))
         logging.info(f"Found columns: {df.columns}")

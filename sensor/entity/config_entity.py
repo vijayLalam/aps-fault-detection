@@ -26,10 +26,11 @@ class DataIngestionConfig:
         self.collection_name="sensor"
         self.data_ingestion_dir = os.path.join(training_pipeline_config.artifact_dir,"data_ingestion",FILE_NAME)
         #To store the dataframe that we created by loading data from Mongo DB,we have to create a path
-        self.feature_store_dir=os.path.join(self.data_ingestion_dir,"feature_store",FILE_NAME)
+        self.feature_store_file_path = os.path.join(self.data_ingestion_dir,"feature_store",FILE_NAME)
         #In Data Ingestion part,we have to devide our data set into train,test,evaluation parts
         self.train_file_path = os.path.join(self.data_ingestion_dir,"dataset",TRAIN_FILE_NAME)
         self.test_file_path = os.path.join(self.data_ingestion_dir,"dataset",TEST_FILE_NAME)
+        self.test_size=0.2
     def to_dict(self,)->dict:
     # To convert all the data into dictionary format
         try:
