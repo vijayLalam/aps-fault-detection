@@ -3,9 +3,10 @@ from sensor.logger import logging
 from sensor.exception import SensorException
 from sensor.config import mongo_client
 import os,sys
+import yaml
 
 def get_collection_as_dataframe(database_name:str,collection_name:str)->pd.DataFrame:
-
+    
     """
     Description: This function return collection as dataframe
     =========================================================
@@ -30,3 +31,15 @@ def get_collection_as_dataframe(database_name:str,collection_name:str)->pd.DataF
         return df
     except Exception as e:
         raise SensorException(e, sys)
+def write_yaml_file(file_path,data:dict):
+    try:
+        file_dir = os.path.dirname(file_path)
+        os.makedirs(file_dir,exist_ok=True)
+        with open(file_path,"w") as file_writer:
+            yaml.dump(data,file_writer)
+            #yaml is file with more readable format compared to json
+            ##Here we are not using any database to save the validation report.
+            ###Instead of DB we are using YAML file to check which validation passed/failed 
+            ####We vcan use MONGO DB also instead of YAML
+    except Exception as e:
+        raise SensorException(error_message, error_detail)        
