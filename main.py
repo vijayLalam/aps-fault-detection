@@ -4,7 +4,7 @@ import sys,os
 from sensor.utils import get_collection_as_dataframe
 from sensor.entity import config_entity
 from sensor.components import data_ingestion
-from sensor.components.data_validation import DataValidation
+from sensor.components import data_validation
 #from sensor.entity.config_entity import DataIngestionConfig
 if __name__=="__main__":
      try:
@@ -19,7 +19,7 @@ if __name__=="__main__":
           #logging.info('get_collection_as_dataframe function in sensor.utils.py called from main.py and  execution completed successfully')
           
           data_validation_config = config_entity.DataValidationConfig(training_pipeline_config)
-          DataValidation(data_validation_config=data_validation_config , data_ingestion_artifact=data_ingestion_artifact)
+          data_validation=data_validation.DataValidation(data_validation_config=data_validation_config , data_ingestion_artifact=data_ingestion_artifact)
           data_validation_artifact = data_validation.initiate_data_validation()
     
     
